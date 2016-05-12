@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52906C2B1CE4312B00C6A32F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52906C2A1CE4312B00C6A32F /* AppDelegate.swift */; };
+		52906C2D1CE4312B00C6A32F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52906C2C1CE4312B00C6A32F /* ViewController.swift */; };
+		52906C301CE4312B00C6A32F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52906C2E1CE4312B00C6A32F /* Main.storyboard */; };
+		52906C321CE4312B00C6A32F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52906C311CE4312B00C6A32F /* Assets.xcassets */; };
+		52906C351CE4312B00C6A32F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52906C331CE4312B00C6A32F /* LaunchScreen.storyboard */; };
+		52906C401CE4312B00C6A32F /* BlueToothChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52906C3F1CE4312B00C6A32F /* BlueToothChatTests.swift */; };
+		52906C4B1CE4312B00C6A32F /* BlueToothChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52906C4A1CE4312B00C6A32F /* BlueToothChatUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52906C3C1CE4312B00C6A32F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52906C1F1CE4312B00C6A32F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52906C261CE4312B00C6A32F;
+			remoteInfo = BlueToothChat;
+		};
+		52906C471CE4312B00C6A32F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52906C1F1CE4312B00C6A32F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52906C261CE4312B00C6A32F;
+			remoteInfo = BlueToothChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		52906C271CE4312B00C6A32F /* BlueToothChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueToothChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52906C2A1CE4312B00C6A32F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		52906C2C1CE4312B00C6A32F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52906C2F1CE4312B00C6A32F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52906C311CE4312B00C6A32F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52906C341CE4312B00C6A32F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52906C361CE4312B00C6A32F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52906C3B1CE4312B00C6A32F /* BlueToothChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlueToothChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52906C3F1CE4312B00C6A32F /* BlueToothChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueToothChatTests.swift; sourceTree = "<group>"; };
+		52906C411CE4312B00C6A32F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52906C461CE4312B00C6A32F /* BlueToothChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlueToothChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52906C4A1CE4312B00C6A32F /* BlueToothChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueToothChatUITests.swift; sourceTree = "<group>"; };
+		52906C4C1CE4312B00C6A32F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52906C241CE4312B00C6A32F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52906C381CE4312B00C6A32F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52906C431CE4312B00C6A32F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52906C1E1CE4312B00C6A32F = {
+			isa = PBXGroup;
+			children = (
+				52906C291CE4312B00C6A32F /* BlueToothChat */,
+				52906C3E1CE4312B00C6A32F /* BlueToothChatTests */,
+				52906C491CE4312B00C6A32F /* BlueToothChatUITests */,
+				52906C281CE4312B00C6A32F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52906C281CE4312B00C6A32F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52906C271CE4312B00C6A32F /* BlueToothChat.app */,
+				52906C3B1CE4312B00C6A32F /* BlueToothChatTests.xctest */,
+				52906C461CE4312B00C6A32F /* BlueToothChatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52906C291CE4312B00C6A32F /* BlueToothChat */ = {
+			isa = PBXGroup;
+			children = (
+				52906C2A1CE4312B00C6A32F /* AppDelegate.swift */,
+				52906C2C1CE4312B00C6A32F /* ViewController.swift */,
+				52906C2E1CE4312B00C6A32F /* Main.storyboard */,
+				52906C311CE4312B00C6A32F /* Assets.xcassets */,
+				52906C331CE4312B00C6A32F /* LaunchScreen.storyboard */,
+				52906C361CE4312B00C6A32F /* Info.plist */,
+			);
+			path = BlueToothChat;
+			sourceTree = "<group>";
+		};
+		52906C3E1CE4312B00C6A32F /* BlueToothChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				52906C3F1CE4312B00C6A32F /* BlueToothChatTests.swift */,
+				52906C411CE4312B00C6A32F /* Info.plist */,
+			);
+			path = BlueToothChatTests;
+			sourceTree = "<group>";
+		};
+		52906C491CE4312B00C6A32F /* BlueToothChatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				52906C4A1CE4312B00C6A32F /* BlueToothChatUITests.swift */,
+				52906C4C1CE4312B00C6A32F /* Info.plist */,
+			);
+			path = BlueToothChatUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52906C261CE4312B00C6A32F /* BlueToothChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52906C4F1CE4312B00C6A32F /* Build configuration list for PBXNativeTarget "BlueToothChat" */;
+			buildPhases = (
+				52906C231CE4312B00C6A32F /* Sources */,
+				52906C241CE4312B00C6A32F /* Frameworks */,
+				52906C251CE4312B00C6A32F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlueToothChat;
+			productName = BlueToothChat;
+			productReference = 52906C271CE4312B00C6A32F /* BlueToothChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52906C3A1CE4312B00C6A32F /* BlueToothChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52906C521CE4312B00C6A32F /* Build configuration list for PBXNativeTarget "BlueToothChatTests" */;
+			buildPhases = (
+				52906C371CE4312B00C6A32F /* Sources */,
+				52906C381CE4312B00C6A32F /* Frameworks */,
+				52906C391CE4312B00C6A32F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52906C3D1CE4312B00C6A32F /* PBXTargetDependency */,
+			);
+			name = BlueToothChatTests;
+			productName = BlueToothChatTests;
+			productReference = 52906C3B1CE4312B00C6A32F /* BlueToothChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		52906C451CE4312B00C6A32F /* BlueToothChatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52906C551CE4312B00C6A32F /* Build configuration list for PBXNativeTarget "BlueToothChatUITests" */;
+			buildPhases = (
+				52906C421CE4312B00C6A32F /* Sources */,
+				52906C431CE4312B00C6A32F /* Frameworks */,
+				52906C441CE4312B00C6A32F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52906C481CE4312B00C6A32F /* PBXTargetDependency */,
+			);
+			name = BlueToothChatUITests;
+			productName = BlueToothChatUITests;
+			productReference = 52906C461CE4312B00C6A32F /* BlueToothChatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52906C1F1CE4312B00C6A32F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = jhon;
+				TargetAttributes = {
+					52906C261CE4312B00C6A32F = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					52906C3A1CE4312B00C6A32F = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 52906C261CE4312B00C6A32F;
+					};
+					52906C451CE4312B00C6A32F = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 52906C261CE4312B00C6A32F;
+					};
+				};
+			};
+			buildConfigurationList = 52906C221CE4312B00C6A32F /* Build configuration list for PBXProject "BlueToothChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52906C1E1CE4312B00C6A32F;
+			productRefGroup = 52906C281CE4312B00C6A32F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52906C261CE4312B00C6A32F /* BlueToothChat */,
+				52906C3A1CE4312B00C6A32F /* BlueToothChatTests */,
+				52906C451CE4312B00C6A32F /* BlueToothChatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52906C251CE4312B00C6A32F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52906C351CE4312B00C6A32F /* LaunchScreen.storyboard in Resources */,
+				52906C321CE4312B00C6A32F /* Assets.xcassets in Resources */,
+				52906C301CE4312B00C6A32F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52906C391CE4312B00C6A32F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52906C441CE4312B00C6A32F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52906C231CE4312B00C6A32F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52906C2D1CE4312B00C6A32F /* ViewController.swift in Sources */,
+				52906C2B1CE4312B00C6A32F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52906C371CE4312B00C6A32F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52906C401CE4312B00C6A32F /* BlueToothChatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52906C421CE4312B00C6A32F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52906C4B1CE4312B00C6A32F /* BlueToothChatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52906C3D1CE4312B00C6A32F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52906C261CE4312B00C6A32F /* BlueToothChat */;
+			targetProxy = 52906C3C1CE4312B00C6A32F /* PBXContainerItemProxy */;
+		};
+		52906C481CE4312B00C6A32F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52906C261CE4312B00C6A32F /* BlueToothChat */;
+			targetProxy = 52906C471CE4312B00C6A32F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		52906C2E1CE4312B00C6A32F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52906C2F1CE4312B00C6A32F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		52906C331CE4312B00C6A32F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52906C341CE4312B00C6A32F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52906C4D1CE4312B00C6A32F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52906C4E1CE4312B00C6A32F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52906C501CE4312B00C6A32F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BlueToothChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lixiaotao.BlueToothChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		52906C511CE4312B00C6A32F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BlueToothChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lixiaotao.BlueToothChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		52906C531CE4312B00C6A32F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BlueToothChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lixiaotao.BlueToothChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlueToothChat.app/BlueToothChat";
+			};
+			name = Debug;
+		};
+		52906C541CE4312B00C6A32F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BlueToothChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lixiaotao.BlueToothChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlueToothChat.app/BlueToothChat";
+			};
+			name = Release;
+		};
+		52906C561CE4312B00C6A32F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BlueToothChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lixiaotao.BlueToothChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BlueToothChat;
+			};
+			name = Debug;
+		};
+		52906C571CE4312B00C6A32F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BlueToothChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lixiaotao.BlueToothChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BlueToothChat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52906C221CE4312B00C6A32F /* Build configuration list for PBXProject "BlueToothChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52906C4D1CE4312B00C6A32F /* Debug */,
+				52906C4E1CE4312B00C6A32F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52906C4F1CE4312B00C6A32F /* Build configuration list for PBXNativeTarget "BlueToothChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52906C501CE4312B00C6A32F /* Debug */,
+				52906C511CE4312B00C6A32F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		52906C521CE4312B00C6A32F /* Build configuration list for PBXNativeTarget "BlueToothChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52906C531CE4312B00C6A32F /* Debug */,
+				52906C541CE4312B00C6A32F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		52906C551CE4312B00C6A32F /* Build configuration list for PBXNativeTarget "BlueToothChatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52906C561CE4312B00C6A32F /* Debug */,
+				52906C571CE4312B00C6A32F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52906C1F1CE4312B00C6A32F /* Project object */;
+}
