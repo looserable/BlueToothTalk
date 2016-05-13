@@ -9,13 +9,12 @@
 import UIKit
 import CocoaAsyncSocket
 
-//绑定的端口号
-let port:UInt16 = 9574
 
-class LoginViewController: UIViewController {
 
-    var asyUdpSocket:AsyncUdpSocket?
-    var nameField:UITextField?
+class LoginViewController: UIViewController,AsyncUdpSocketDelegate {
+
+    var nameField   :UITextField?
+    var ipStr       :String?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,33 +39,31 @@ class LoginViewController: UIViewController {
         self.view.addSubview(button)
         
     }
-//    初始化一个asyUdpSocket对象
-    func initSocket(){
-        asyUdpSocket = AsyncUdpSocket.init(delegate: self)
-        try! asyUdpSocket?.bindToPort(port)
-        try! asyUdpSocket?.enableBroadcast(true)
-    }
-    
     func loginClick(sender:UIButton){
         print("我登陆了")
-        let username = self.nameField?.text
+//        对外展示的名字和本机的ip
+        let username:String! = self.nameField?.text
         let ipStr:String! = GetIPAddress.deviceIPAdress()
+        self.ipStr = ipStr
         
+//        缓存到本地
         let userDefault = NSUserDefaults.standardUserDefaults()
         userDefault.setObject(username, forKey: "name")
         userDefault.setObject(ipStr, forKey: "ipStr")
         
-//        发送udp的广播，告诉局域网里的小伙伴，我上线了。
-        let broadCast:String = "小伙伴们,我已经上线了，我的名字是：\(username) 我的ip地址是:\(ipStr)"
+        let infoStr = "小伙伴们，我上线了，我的名字是:\(username):我的ip地址为:\(ipStr)"
+        let data = infoStr.dataUsingEncoding(NSUTF8StringEncoding)
         
-        let data:NSData! = broadCast.dataUsingEncoding(NSUTF8StringEncoding)
+        let socketRefe = SocketReference.sharedSocetReference()
+        socketRefe.SendMsg(data!, ipStr: "255.255.255.255")
         
-        asyUdpSocket?.sendData(data, toHost: "255.255.255.255", port: port, withTimeout: -1, tag: 0)
+        let vc = ViewController()
+        let secondNav = UINavigationController.init(rootViewController: vc)
+        self .presentViewController(secondNav, animated: true) {
+            print("跳转成功了")
+        }
         
-        
-    }
-    
-    
+}
     
     
     
@@ -76,15 +73,5 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

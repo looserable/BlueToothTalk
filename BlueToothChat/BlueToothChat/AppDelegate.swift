@@ -17,15 +17,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        let name = userDefaults.objectForKey("name")
-        if name == nil {
-            let loginVC = LoginViewController()
-            self.window?.rootViewController = loginVC
-        }else{
-            let vc = ViewController()
-            self.window?.rootViewController = vc
-        }
+//        let userDefaults = NSUserDefaults.standardUserDefaults()
+//        let name = userDefaults.objectForKey("name")
+        
+        let loginVC = LoginViewController()
+        self.window?.rootViewController = loginVC
+//        这里无法考虑自动登陆的原因在于ip在不同的wifi下会发生改变，因为你每次连接，系统会自动为你分配一个ip地址，所以自动登陆的话是不能实现的
+        
+//        if name == nil {
+//            let loginVC = LoginViewController()
+//            self.window?.rootViewController = loginVC
+//        }else{
+//            let vc = ViewController()
+//            self.window?.rootViewController = vc
+//        }
         self.window?.makeKeyAndVisible()
         
         return true
