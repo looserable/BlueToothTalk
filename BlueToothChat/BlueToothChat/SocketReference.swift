@@ -19,11 +19,13 @@ let port:UInt16 = 8888
 
 class SocketReference: NSObject,AsyncUdpSocketDelegate {
     
-    var asyUdpSocket:AsyncUdpSocket?
+    var clientSocket:AsyncUdpSocket?
+    var serverSocket:AsyncUdpSocket?
+    
     var modelArray  :[ContactModel]?
     var ipStr       :String?
     
-    //  单例的类方法
+//  单例的类方法
     class func sharedSocetReference()->SocketReference{
 
         dispatch_once(&once) {
@@ -33,7 +35,7 @@ class SocketReference: NSObject,AsyncUdpSocketDelegate {
     }
 //   发送消息
     func SendMsg(data:NSData,ipStr:String){
-        let res = asyUdpSocket?.sendData(data, toHost:ipStr, port: port, withTimeout: 3000, tag: 0)
+        let res = clientSocket?.sendData(data, toHost:ipStr, port: port, withTimeout: 3000, tag: 0)
         if res == false {
             print("send failed")
         }
@@ -44,27 +46,29 @@ class SocketReference: NSObject,AsyncUdpSocketDelegate {
         self.initSocket()
     }
     
-//    初始化一个asyUdpSocket对象
+    //MARK: 初始化一个asyUdpSocket对象
     func initSocket(){
-//        这三个属性进行初始化
-        asyUdpSocket = AsyncUdpSocket.init(delegate: self)
+        //        这三个属性进行初始化
         ipStr = GetIPAddress.deviceIPAdress()
         modelArray = [ContactModel]()
         
+        clientSocket = AsyncUdpSocket.init(delegate: self)
+        try! clientSocket?.enableBroadcast(true)
 
-        try! asyUdpSocket?.enableBroadcast(true)
+        serverSocket = AsyncUdpSocket.init(delegate:self)
         do{
-            try asyUdpSocket?.bindToPort(port)
+            try serverSocket?.bindToPort(port)
         }catch{
             print("绑定端口失败")
         }
         //        启动接收线程
-        asyUdpSocket?.receiveWithTimeout(3000, tag: 0)
+        serverSocket?.receiveWithTimeout(-1, tag: 0)
     }
     
 //   接收socket的回调方法
     func onUdpSocket(sock: AsyncUdpSocket!, didReceiveData data: NSData!, withTag tag: Int, fromHost host: String!, port: UInt16) -> Bool {
 
+        
         let infoStr = String.init(data: data, encoding: NSUTF8StringEncoding)
         let contact = ContactModel.makeContactModel(infoStr!)
         if contact.contactIpStr != ipStr {
@@ -75,7 +79,8 @@ class SocketReference: NSObject,AsyncUdpSocketDelegate {
             NSNotificationCenter.defaultCenter().postNotification(noti)
         }
         print("did receive")
-
+        serverSocket?.receiveWithTimeout(-1, tag: 0)
+        
         return true
     }
     
